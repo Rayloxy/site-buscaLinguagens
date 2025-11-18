@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de programação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Busca de linguagens de programação</h1>
+        <div>
+            <input type="text" id="campo-busca" placeholder="Digite uma linguagem de programação">
+            <button id="botao-busca">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <!-- Exemplo de como um artigo será exibido -->
+            <article>
+                                <h2>Python</h2>
+                <p>
+                    Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.
+                    <strong>Categoria:</strong> Web, Data Science, AI.
+                </p>
+                <a href="https://docs.python.org/3/">Leia mais</a>
+            </article>
+            <article>
+                                <h2>Java</h2>
+                <p>
+                    Java é uma linguagem de programação orientada a objetos, baseada em classes e concorrente. É conhecida por sua portabilidade com o lema "write once, run anywhere".
+                    <strong>Categoria:</strong> Backend, Mobile (Android), Enterprise.
+                </p>
+                <a href="https://docs.oracle.com/en/java/">Leia mais</a>
+            </article>
+            <article>
+                <h2>JavaScript</h2>
+                <p>
+                    JavaScript é uma linguagem de programação interpretada de alto nível, caracterizada como dinâmica, fracamente tipada, baseada em protótipos e multiparadigma.
+                    <strong>Categoria:</strong> Web, Frontend, Backend.
+                </p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Leia mais</a>
+            </article>
+            <article>
+               <h2>Lua</h2>
+                <p>
+                    Lua é uma linguagem de programação leve, de script e multiparadigma, projetada para ser facilmente embarcada em outras aplicações para estender suas funcionalidades.
+                    <strong>Categoria:</strong> Games, Scripting, Embedded Systems.
+                </p>
+                <a href="https://www.lua.org/docs.html">Leia mais</a> 
+            </article>
+            <article>
+                <h2>C#</h2>
+                <p>
+                    C# (pronuncia-se "C sharp") é uma linguagem de programação moderna, orientada a objetos e de tipo seguro, desenvolvida pela Microsoft como parte da plataforma .NET.
+                    <strong>Categoria:</strong> Backend, Games (Unity), Windows.
+                </p>
+                <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/">Leia mais</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-links">
+            <li>
+                <a href="https://github.com/Rayloxy">GitHub</a>
+            </li>
+            <li>
+                <a href="https://alura.com.br">Alura</a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        /**
+         * Função para filtrar os artigos com base no termo de busca.
+         */
+        function iniciarBusca() {
+            // 1. Pega o valor digitado no campo de busca e converte para minúsculas.
+            const termoBusca = document.getElementById('campo-busca').value.toLowerCase();
+
+            // 2. Seleciona todos os elementos <article> da página.
+            const artigos = document.querySelectorAll('article');
+
+            // 3. Itera sobre cada artigo para verificar se ele corresponde à busca.
+            artigos.forEach(artigo => {
+                // Pega o texto do título (h2) do artigo e converte para minúsculas.
+                const titulo = artigo.querySelector('h2').textContent.toLowerCase();
+
+                // 4. Verifica se o título do artigo inclui o termo buscado.
+                if (titulo.includes(termoBusca)) {
+                    // Se corresponder, o artigo é exibido.
+                    artigo.style.display = 'block';
+                } else {
+                    // Se não corresponder, o artigo é ocultado.
+                    artigo.style.display = 'none';
+                }
+            });
+        }
+
+        // Adiciona um "ouvinte de eventos" para acionar a busca a cada tecla digitada.
+        document.getElementById('campo-busca').addEventListener('keyup', iniciarBusca);
+        // O botão de busca também pode acionar a função.
+        document.getElementById('botao-busca').addEventListener('click', iniciarBusca);
+    </script>
+</body>
+</html>
