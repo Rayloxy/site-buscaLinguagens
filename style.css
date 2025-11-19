@@ -8,7 +8,9 @@
     --primary-color: #8ab4f8; /* Cor primária (azul claro) */
     --secondary-color: #e8eaed; /* Cor secundária (cinza claro) */
     --tertiary-color: #9aa0a6; /* Cor terciária (cinza médio) */
-    --bg-color: #32433c; /* Cor de fundo (cinza escuro) */
+    --bg-color: #121212; /* Cor de fundo (preto suave) */
+    --card-bg-color: #1e1e1e; /* Cor de fundo para os cards */
+    --border-color: #3c4043; /* Cor para bordas sutis */
 }
 
 body {
@@ -95,24 +97,24 @@ main {
     padding-bottom: 5rem; /* Adiciona espaço para o rodapé não colar no último artigo */
 }
 
-article {
-    background: none; /* Sem cor de fundo */
-    border-radius: 0; /* Sem bordas arredondadas */
-    padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
+.card {
+    background: var(--card-bg-color); /* Fundo sutil para o card */
+    border-radius: 12px; /* Bordas mais arredondadas e modernas */
+    padding: 1.5rem; /* Espaçamento interno consistente */
     margin-bottom: 1.25rem; /* Margem inferior */
-    box-shadow: none; /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
-    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+    border: 1px solid transparent; /* Borda inicial transparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transição suave para os efeitos */
 }
 
-article:hover {
-    transform: scale(1.01); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
+    border-color: var(--primary-color); /* Adiciona uma borda na cor de destaque */
     cursor: pointer; /* Muda o cursor para uma mão */
 }
 
-article h2 {
+.card h2 {
     margin-top: 0; /* Remove a margem superior */
     font-weight: 600; /* Peso da fonte */
     font-size: 1.6rem; /* Tamanho da fonte */
@@ -122,7 +124,7 @@ article h2 {
     color: var(--primary-color); /* Cor do texto */
 }
 
-article p {
+.card p {
     margin: 0.5rem 0; /* Margem superior e inferior */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
     font-size: 1rem; /* Tamanho da fonte */
@@ -130,18 +132,18 @@ article p {
     color: var(--secondary-color); /* Cor do texto */
 }
 
-article p strong {
+.card p strong {
     color: var(--tertiary-color); /* Cor do texto em negrito */
     font-weight: 400; /* Peso da fonte */
 }
 
-article a {
+.card a {
     color: var(--primary-color); /* Cor do link */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: 200; /* Peso da fonte */
 }
 
-article a:hover {
+.card a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
@@ -197,7 +199,7 @@ article a:hover {
         padding: 0 1rem; /* Adiciona espaçamento lateral */
     }
 
-    article:hover { /* Estilos para o article em telas menores */
+    .card:hover { /* Estilos para o article em telas menores */
         transform: none; /* Remove o efeito de escala ao passar o mouse */
     }
 }
@@ -214,7 +216,7 @@ article a:hover {
         font-size: 1rem; /* Reduz o tamanho da fonte */
     }
 
-    article h2 { /* Estilos para o h2 do article em telas muito pequenas */
+    .card h2 { /* Estilos para o h2 do article em telas muito pequenas */
         font-size: 1.3rem; /* Reduz o tamanho da fonte */
     }
 
