@@ -1,50 +1,58 @@
 [
 {
     "nome":"JavaScript",
-    "descricao": "JS é uma linguagem de programação interpretada de alto nível, caracterizada como dinâmica, fracamente tipada, baseada em protótipos e multiparadigma.",
+    "descricao": "Linguagem de programação interpretada de alto nível, caracterizada como dinâmica, fracamente tipada, baseada em protótipos e multiparadigma.",
     "ano": 1995,
-    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
 },
 {
     "nome":"Python",
-    "descricao": "Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
+    "descricao": "Linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
     "ano": 1991,
-    "link": "https://docs.python.org/3/"
+    "link": "https://docs.python.org/3/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
 },
 {
     "nome":"Java",
     "descricao": "Linguagem orientada a objetos, robusta e independente de plataforma, amplamente usada em sistemas corporativos e aplicativos Android.",
     "ano": 1995,
-    "link": "https://docs.oracle.com/en/java/"
+    "link": "https://docs.oracle.com/en/java/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
 },
 {
     "nome":"C#",
     "descricao": "Linguagem moderna, orientada a objetos e desenvolvida pela Microsoft, popular para desenvolvimento web com .NET, jogos com Unity e aplicações Windows.",
     "ano": 2000,
-    "link": "https://learn.microsoft.com/pt-br/dotnet/csharp/"
+    "link": "https://learn.microsoft.com/pt-br/dotnet/csharp/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
 },
 {
     "nome":"Go",
     "descricao": "Linguagem de programação compilada e concorrente desenvolvida pelo Google, focada em simplicidade, eficiência e construção de software de rede.",
     "ano": 2009,
-    "link": "https://go.dev/doc/"
+    "link": "https://go.dev/doc/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"
 },
 {
     "nome":"PHP",
     "descricao": "Linguagem de script do lado do servidor, amplamente utilizada para desenvolvimento web, que pode ser embutida em HTML.",
     "ano": 1995,
-    "link": "https://www.php.net/manual/pt_BR/"
+    "link": "https://www.php.net/manual/pt_BR/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
 },
 {
     "nome":"TypeScript",
     "descricao": "Um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem estática opcional à linguagem.",
     "ano": 2012,
-    "link": "https://www.typescriptlang.org/docs/"
+    "link": "https://www.typescriptlang.org/docs/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
 },
 {
     "nome":"Rust",
     "descricao": "Linguagem de programação de sistemas focada em segurança, concorrência e desempenho, patrocinada pela Mozilla.",
     "ano": 2010,
-    "link": "https://doc.rust-lang.org/book/"
+    "link": "https://doc.rust-lang.org/book/",
+    "imagem": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
 }
 ]

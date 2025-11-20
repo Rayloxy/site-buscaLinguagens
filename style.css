@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
 * {
     box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
 }
 
 :root {
-    --primary-color: #8ab4f8; /* Cor primária (azul claro) */
-    --secondary-color: #e8eaed; /* Cor secundária (cinza claro) */
-    --tertiary-color: #9aa0a6; /* Cor terciária (cinza médio) */
-    --bg-color: #121212; /* Cor de fundo (preto suave) */
+    --primary-color: #0b7803; /* Cor primária (azul claro) */
+    --secondary-color: #d2d2d26b; /* Cor secundária (cinza claro) */
+    --tertiary-color: #b5b4afd0; /* Cor terciária (cinza médio) */
+    --bg-color: #1d1d1dfb; /* Cor de fundo (preto suave) */
     --card-bg-color: #1e1e1e; /* Cor de fundo para os cards */
     --border-color: #3c4043; /* Cor para bordas sutis */
 }
@@ -17,7 +16,7 @@ body {
     margin: 0; /* Remove a margem padrão do body */
     background: var(--bg-color); /* Define a cor de fundo usando uma variável */
     color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+      font-family: "Special Gothic Expanded One", sans-serif; /* Define a família da fonte */
 }
 
 header {
@@ -34,7 +33,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamanho da fonte */
+    font-size: 1.50rem; /* Tamanho da fonte */
     margin: 0; /* Remove a margem padrão */
     font-weight: 500; /* Peso da fonte (médio) */
     white-space: nowrap; /* Impede a quebra de linha do texto */
@@ -97,14 +96,26 @@ main {
     padding-bottom: 5rem; /* Adiciona espaço para o rodapé não colar no último artigo */
 }
 
+.card-container {
+    display: grid;
+    /* 
+      Cria colunas responsivas:
+      - auto-fit: Encaixa quantas colunas forem possíveis na linha.
+      - minmax(300px, 1fr): Cada coluna terá no mínimo 300px e no máximo 1 fração do espaço disponível.
+      Isso faz com que o número de colunas se ajuste ao tamanho da tela.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaçamento consistente entre os cards */
+}
+
 .card {
     background: var(--card-bg-color); /* Fundo sutil para o card */
     border-radius: 12px; /* Bordas mais arredondadas e modernas */
     padding: 1.5rem; /* Espaçamento interno consistente */
-    margin-bottom: 1.25rem; /* Margem inferior */
     border: 1px solid transparent; /* Borda inicial transparente */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidade */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transição suave para os efeitos */
+    animation: fadeInUp 0.5s ease-in-out; /* Adiciona a animação de entrada */
 }
 
 .card:hover {
@@ -112,6 +123,27 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
     border-color: var(--primary-color); /* Adiciona uma borda na cor de destaque */
     cursor: pointer; /* Muda o cursor para uma mão */
+}
+
+.card-imagem-container {
+    height: 100px; /* Altura fixa para o container da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Espaço entre a imagem e o título */
+    background-color: #fff; /* Fundo branco para destacar logos com cores claras ou transparentes */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 0.5rem;
+}
+
+.card-imagem {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    max-height: 70px; /* Altura máxima para a imagem */
+    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+}
+
+.card h2 {
+    text-align: center; /* Centraliza o nome da linguagem */
 }
 
 .card h2 {
@@ -177,6 +209,18 @@ main {
 
 .footer-links a:hover {
     color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+}
+
+/* Animação para os cards aparecerem suavemente */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {

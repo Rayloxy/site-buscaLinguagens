@@ -16,56 +16,14 @@
     </header>
 
     <main>
-        <section class="card-contrainer">
-             <article class="card">
+         <section class="card-container">
+             <!-- <article class="card">
                 <h2>JavaScript</h2>
                 <p>1995</p>
                 <p>JavaScript é uma linguagem de programação interpretada de alto nível, caracterizada como dinâmica, fracamente tipada, baseada em protótipos e multiparadigma.</p>
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>Python</h2>
-                <p>1991</p>
-                <p>Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.</p>
-                <a href="https://docs.python.org/3/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>Java</h2>
-                <p>1995</p>
-                <p>Linguagem orientada a objetos, robusta e independente de plataforma, amplamente usada em sistemas corporativos e aplicativos Android.</p>
-                <a href="https://docs.oracle.com/en/java/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>C#</h2>
-                <p>2000</p>
-                <p>Linguagem moderna, orientada a objetos e desenvolvida pela Microsoft, popular para desenvolvimento web com .NET, jogos com Unity e aplicações Windows.</p>
-                <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>Go</h2>
-                <p>2009</p>
-                <p>Linguagem de programação compilada e concorrente desenvolvida pelo Google, focada em simplicidade, eficiência e construção de software de rede.</p>
-                <a href="https://go.dev/doc/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>PHP</h2>
-                <p>1995</p>
-                <p>Linguagem de script do lado do servidor, amplamente utilizada para desenvolvimento web, que pode ser embutida em HTML.</p>
-                <a href="https://www.php.net/manual/pt_BR/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>TypeScript</h2>
-                <p>2012</p>
-                <p>Um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem estática opcional à linguagem.</p>
-                <a href="https://www.typescriptlang.org/docs/" target="_blank">Saiba mais</a>
-            </article>
-            <article class="card">
-                <h2>Rust</h2>
-                <p>2010</p>
-                <p>Linguagem de programação de sistemas focada em segurança, concorrência e desempenho, patrocinada pela Mozilla.</p>
-                <a href="https://doc.rust-lang.org/book/" target="_blank">Saiba mais</a>
-            </article>
-        </section>
+            </article>-->
+        </section> 
     </main>
 
     <footer class="footer">
@@ -80,33 +38,6 @@
         </ul>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // Espera o documento HTML ser completamente carregado para executar o script.
-        document.addEventListener('DOMContentLoaded', () => {
 
-            // 1. Pega os elementos do HTML com os quais vamos interagir.
-            const campoBusca = document.getElementById('campo-busca');
-            const botaoBusca = document.getElementById('botao-busca');
-            const cards = document.querySelectorAll('.card'); // Pega todos os cards de linguagens.
-
-            /**
-             * 2. Função que filtra os cards visíveis com base no termo de busca.
-             */
-            function filtrarCards() {
-                // Pega o valor digitado no campo de busca e converte para minúsculas.
-                const termoBusca = campoBusca.value.toLowerCase();
-
-                // 3. Itera sobre cada card para decidir se ele deve ser mostrado ou escondido.
-                cards.forEach(card => {
-                    const tituloCard = card.querySelector('h2').textContent.toLowerCase();
-
-                    card.style.display = tituloCard.includes(termoBusca) ? 'block' : 'none';
-                });
-            }
-
-            // 4. Adiciona o "ouvinte de evento" para o clique no botão.
-            botaoBusca.addEventListener('click', filtrarCards);
-        });
-    </script>
 </body>
 </html>
