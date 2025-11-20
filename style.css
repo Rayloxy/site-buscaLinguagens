@@ -211,6 +211,34 @@ main {
     color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
 }
 
+/* Estilos para o Easter Egg */
+.easter-egg {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    border: 1px solid var(--primary-color);
+    margin: 2rem auto;
+    max-width: 600px;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.easter-egg h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.easter-egg-imagem {
+    max-width: 200px; /* Define uma largura máxima para a imagem */
+    border-radius: 10px; /* Arredonda as bordas da imagem */
+    margin-bottom: 1.5rem; /* Adiciona um espaço abaixo da imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+.easter-egg p {
+    font-size: 1.2rem;
+}
+
 /* Animação para os cards aparecerem suavemente */
 @keyframes fadeInUp {
     from {
@@ -245,6 +273,11 @@ main {
 
     .card:hover { /* Estilos para o article em telas menores */
         transform: none; /* Remove o efeito de escala ao passar o mouse */
+    }
+}
+@media (max-width: 520px) {
+    .footer-content {
+        justify-content: center; /* Centraliza tudo quando a tela for pequena */
     }
 }
 

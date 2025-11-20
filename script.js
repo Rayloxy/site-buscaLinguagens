@@ -20,6 +20,24 @@ async function carregarDados() {
 // Função de busca, acionada pelo botão ou ao digitar.
 function iniciarBusca() {
     const termoBusca = campoBusca.value.toLowerCase();
+
+    // Easter Egg para o Talis!
+    if (termoBusca === 'talis') {
+        cardContainer.innerHTML = `
+            <div class="easter-egg">
+                <img src="https://preview.redd.it/big-monke-flips-you-off-what-u-do-v0-861gk9gqka0c1.png?auto=webp&s=4ffd6a12783c45e1a56bb7c19a57ead83aaa4f33" alt="macaco"
+                 class="easter-egg-imagem">
+                <h2>E aí, Talis! 👋</h2>
+                <p>Talis ser muito gay!</p>
+                <p>Aqui pra você!</p>
+                <p>Adeus 😉</p>
+                <a href="https://www.instagram.com/talys.ms/" target="_blank">segue o mano la</a>
+                
+            </div>
+        `;
+        return; // Para a execução para não buscar de verdade
+    }
+
     const resultados = dados.filter(dado => 
         dado.nome.toLowerCase().includes(termoBusca) ||
         dado.descricao.toLowerCase().includes(termoBusca)
